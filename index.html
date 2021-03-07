@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Simple Speaker Placement Generator</title>
+  <meta name="description" content="Simple Speaker Placement">
+  <meta name="author" content="Glen and Declan Hunter">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Simple Speaker Placement Generator</h1>
+  </header>
+
+  <main class="smol-sidebar">
+    <aside class="sidebar">
+      <h3>Enter room dimensions below:</h3>
+      <form>
+        <div class="form-group">
+          <label for="room-width">
+            Room width:
+          </label>
+          <input type="text" id="room-width" class="input-dimension"/>
+        </div>
+        <div class="form-group">
+          <label for="room-width">
+            Room length:
+          </label>
+          <input type="text" id="room-width" class="input-dimension"/>
+        </div>
+        <div class="form-group">
+          <label for="room-width">
+            Room height:
+          </label>
+          <input type="text" id="room-width" class="input-dimension"/>
+          <!-- <div class="sublabel">
+            (if not flat pick the height above the speakers)
+          </div> -->
+        </div>
+        <div class="form-submit">
+          <button>Clear</button><button>Submit</button>
+        </div>
+      </form>
+    </aside>
+    <div class="content">
+      <section>
+        <h2>Your room</h2>
+        <div class="room-container">
+          <!-- <div class="right-wall-dimension">--room-length</div> -->
+          <!-- <div class="front-wall-dimension">--room-width</div> -->
+          <div class="left-wall-dimension">--room-length</div>
+          <div class="room">
+            <i class="fas fa-2x fa-volume-up left-speaker-icon"></i>
+            <span class="left-speaker-sidewall-distance">left side</span>
+            <span class="left-speaker-frontwall-distance">##</span>
+            <i class="fas fa-2x fa-volume-up right-speaker-icon"></i>
+            <span class="right-speaker-sidewall-distance">##</span>
+            <span class="right-speaker-frontwall-distance">##</span>
+            <i class="fas fa-2x fa-couch listening-position-icon"></i>
+            <span class="listening-position-sidewall-distance">##</span>
+            <span class="listening-position-frontwall-distance">##</span>
+          </div>
+          <div class="rear-wall-dimension">--room-width</div>
+        </div>
+      </section>
+    </div class="content">
+  </main>
+  <footer>
+  </footer>
+
+  <script defer src="dep/fontawesome-free-5.15.2-web/js/all.js"></script>
+  <!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>

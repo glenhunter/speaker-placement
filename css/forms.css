@@ -1,0 +1,35 @@
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+}
+
+.input-dimension {
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 6px 4px;
+  max-width: 6ch;
+}
+
+button {
+  border: 1px solid #000;
+  border-radius: 6px;
+  height: 32px;
+  margin-right: 16px;
+  padding: 0 8px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+.form-submit {
+  margin-top: 24px;
+  text-align: right;
+}

@@ -1,0 +1,73 @@
+:root {
+  --room-width: 500px;
+  --room-length: 700px;
+  --room-height: 400px;
+  --sidewall-multiplier: .276;
+  --rearwall-multiplier: .447;
+}
+
+.room-container {
+  padding: 1rem;
+  position: relative;
+  width: auto;
+}
+
+.front-wall-dimension,
+.rear-wall-dimension,
+.left-wall-dimension,
+.right-wall-dimension {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.front-wall-dimension,
+.rear-wall-dimension {
+  width: var(--room-width);
+}
+
+.left-wall-dimension {
+  position: absolute;
+  left: -37px;
+  transform: rotate(-90deg);
+  top: 50%;
+}
+
+.right-wall-dimension {
+  position: absolute;
+  right: 0;
+  transform: rotate(90deg);
+}
+
+.room {
+  /* we want the rectangle to be oriented with the shorts sides top and bottom */
+  height: var(--room-length);
+  width: var(--room-width);
+
+  border: 1px solid #000;
+  position: relative;
+}
+
+.right-speaker-icon, .left-speaker-icon {
+  transform: rotate(90deg);
+}
+
+.right-speaker-icon {
+  color: red;
+  position: absolute;
+  top: calc(var(--room-length) * var(--rearwall-multiplier));
+  right: calc(var(--room-width) * var(--sidewall-multiplier));
+}
+
+.left-speaker-icon {
+  position: absolute;
+  top: calc(var(--room-length) * var(--rearwall-multiplier));
+  left: calc(var(--room-width) * var(--sidewall-multiplier));
+}
+
+.listening-position-icon {
+  position: absolute;
+  top: calc( 2 * calc(var(--room-length) * var(--rearwall-multiplier)));
+  left: calc(50% - 20px);
+}
+
+
