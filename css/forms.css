@@ -10,19 +10,29 @@ label {
 }
 
 .input-dimension {
-  border: 1px solid #000;
+  border: 2px solid var(--highlight);
   border-radius: 6px;
   font-size: 16px;
   padding: 6px 4px;
   max-width: 6ch;
 }
 
-button {
-  border: 1px solid #000;
+select {
+  border: 2px solid var(--highlight);
   border-radius: 6px;
+  font-size: 16px;
+  padding: 6px 4px;
+}
+
+button {
+  background-color: var(--highlight);
+  border: 2px solid var(--highlight);
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
   height: 32px;
   margin-right: 16px;
-  padding: 0 8px;
+  padding: 4px 8px;
 }
 
 button:last-child {

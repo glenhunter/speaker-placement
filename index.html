@@ -20,6 +20,16 @@
       <form>
         <div class="form-group">
           <label for="room-width">
+            Units:
+          </label>
+          <!-- updates --units text below -->
+          <select>
+            <option>Inches</option>
+            <option>Centimeters</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="room-width">
             Room width:
           </label>
           <!-- updates CSS var --room-width and --room-width text below -->
@@ -48,19 +58,21 @@
       <section>
         <h2>Your room</h2>
         <div class="room-container">
-          <div class="left-wall-dimension">--room-length</div>
+          <div class="left-wall-dimension">--room-length --units</div>
           <div class="room">
+            <!-- ## values are updated according to formula -->
+            <span class="speaker-frontwall-distance">## --units</span>
+
             <i class="fas fa-2x fa-volume-up left-speaker-icon"></i>
-            <span class="left-speaker-sidewall-distance">left side</span>
-            <span class="left-speaker-frontwall-distance">##</span>
+            <span class="left-speaker-sidewall-distance">## --units</span>
+
             <i class="fas fa-2x fa-volume-up right-speaker-icon"></i>
-            <span class="right-speaker-sidewall-distance">##</span>
-            <span class="right-speaker-frontwall-distance">##</span>
+            <span class="right-speaker-sidewall-distance">## --units</span>
+
             <i class="fas fa-2x fa-couch listening-position-icon"></i>
-            <span class="listening-position-sidewall-distance">##</span>
-            <span class="listening-position-frontwall-distance">##</span>
+            <span class="listening-position-distance">## --units</span>
           </div>
-          <div class="rear-wall-dimension">--room-width</div>
+          <div class="rear-wall-dimension">--room-width --units</div>
         </div>
       </section>
     </div class="content">

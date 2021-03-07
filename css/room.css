@@ -27,7 +27,7 @@
 
 .left-wall-dimension {
   position: absolute;
-  left: -37px;
+  left: 0;
   transform: rotate(-90deg);
   top: 50%;
 }
@@ -39,11 +39,13 @@
 }
 
 .room {
-  /* we want the rectangle to be oriented with the shorts sides top and bottom */
+  /* we want the rectangle to be oriented with the short sides at
+     the top and bottom */
   height: var(--room-length);
   width: var(--room-width);
 
-  border: 1px solid #000;
+  background-color: #fff;
+  border: 3px solid #000;
   position: relative;
 }
 
@@ -68,6 +70,32 @@
   position: absolute;
   top: calc( 2 * calc(var(--room-length) * var(--rearwall-multiplier)));
   left: calc(50% - 20px);
+}
+
+.speaker-frontwall-distance {
+  position: absolute;
+  top: calc(calc(var(--room-length) * var(--rearwall-multiplier)) / 2);
+  left: calc(50% - 35px);
+  transform: rotate(-90deg);
+}
+
+.right-speaker-sidewall-distance {
+  position: absolute;
+  top: calc(var(--room-length) * var(--rearwall-multiplier));
+  right: 8px;
+}
+
+.left-speaker-sidewall-distance {
+  position: absolute;
+  top: calc(var(--room-length) * var(--rearwall-multiplier));
+  left: 8px;
+}
+
+.listening-position-distance {
+  position: absolute;
+  bottom: calc(calc(var(--room-length) * var(--rearwall-multiplier)) / 2);
+  left: calc(50% - 35px);
+  transform: rotate(-90deg);
 }
 
 
