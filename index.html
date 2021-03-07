@@ -3,12 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Simple Speaker Placement Generator</title>
   <meta name="description" content="Simple Speaker Placement">
   <meta name="author" content="Glen and Declan Hunter">
   <link rel="stylesheet" href="css/styles.css">
-
 </head>
 
 <body>
@@ -24,22 +22,22 @@
           <label for="room-width">
             Room width:
           </label>
+          <!-- updates CSS var --room-width and --room-width text below -->
           <input type="text" id="room-width" class="input-dimension"/>
         </div>
         <div class="form-group">
-          <label for="room-width">
+          <label for="room-length">
             Room length:
           </label>
-          <input type="text" id="room-width" class="input-dimension"/>
+          <!-- updates CSS var --room-length and --room-length text below -->
+          <input type="text" id="room-length" class="input-dimension"/>
         </div>
         <div class="form-group">
-          <label for="room-width">
+          <label for="room-height">
             Room height:
           </label>
-          <input type="text" id="room-width" class="input-dimension"/>
-          <!-- <div class="sublabel">
-            (if not flat pick the height above the speakers)
-          </div> -->
+          <!-- updates CSS var --room-height -->
+          <input type="text" id="room-height" class="input-dimension"/>
         </div>
         <div class="form-submit">
           <button>Clear</button><button>Submit</button>
@@ -50,8 +48,6 @@
       <section>
         <h2>Your room</h2>
         <div class="room-container">
-          <!-- <div class="right-wall-dimension">--room-length</div> -->
-          <!-- <div class="front-wall-dimension">--room-width</div> -->
           <div class="left-wall-dimension">--room-length</div>
           <div class="room">
             <i class="fas fa-2x fa-volume-up left-speaker-icon"></i>
@@ -73,6 +69,6 @@
   </footer>
 
   <script defer src="dep/fontawesome-free-5.15.2-web/js/all.js"></script>
-  <!-- <script src="js/scripts.js"></script> -->
+  <script src="js/scripts.js"></script>
 </body>
 </html>
