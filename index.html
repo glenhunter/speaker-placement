@@ -16,7 +16,7 @@
 
   <main class="smol-sidebar">
     <aside class="sidebar">
-      <h3>Enter room dimensions below:</h3>
+      <h3>Room dimensions:</h3>
       <form>
         <div class="form-group">
           <label for="room-width">
@@ -33,21 +33,21 @@
             Room width:
           </label>
           <!-- updates CSS var --room-width and --room-width text below -->
-          <input type="text" id="room-width" class="input-dimension"/>
+          <input type="number" id="room-width" class="input-dimension"/>
         </div>
         <div class="form-group">
           <label for="room-length">
             Room length:
           </label>
           <!-- updates CSS var --room-length and --room-length text below -->
-          <input type="text" id="room-length" class="input-dimension"/>
+          <input type="number" id="room-length" class="input-dimension"/>
         </div>
         <div class="form-group">
           <label for="room-height">
             Room height:
           </label>
           <!-- updates CSS var --room-height -->
-          <input type="text" id="room-height" class="input-dimension"/>
+          <input type="number" id="room-height" class="input-dimension"/>
         </div>
         <div class="form-submit">
           <button>Clear</button><button>Submit</button>
@@ -56,10 +56,11 @@
     </aside>
     <div class="content">
       <section>
-        <h2>Your room</h2>
+        <h2 class="content-title">Your room</h2>
         <div class="room-container">
-          <div class="left-wall-dimension">--room-length --units</div>
           <div class="room">
+            <div class="left-wall-dimension">--room-length --units</div>
+
             <!-- ## values are updated according to formula -->
             <span class="speaker-frontwall-distance">## --units</span>
 
@@ -71,11 +72,12 @@
 
             <i class="fas fa-2x fa-couch listening-position-icon"></i>
             <span class="listening-position-distance">## --units</span>
+
+            <div class="rear-wall-dimension">--room-width --units</div>
           </div>
-          <div class="rear-wall-dimension">--room-width --units</div>
         </div>
       </section>
-    </div class="content">
+    </div>
   </main>
   <footer>
   </footer>

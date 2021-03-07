@@ -25,17 +25,16 @@
   width: var(--room-width);
 }
 
-.left-wall-dimension {
+.rear-wall-dimension {
   position: absolute;
-  left: 0;
-  transform: rotate(-90deg);
-  top: 50%;
+  bottom: -30px;
 }
 
-.right-wall-dimension {
+.left-wall-dimension {
   position: absolute;
-  right: 0;
-  transform: rotate(90deg);
+  left: -80px;
+  transform: rotate(-90deg);
+  top: 50%;
 }
 
 .room {
@@ -46,6 +45,7 @@
 
   background-color: #fff;
   border: 3px solid #000;
+  margin: 0 auto;
   position: relative;
 }
 
