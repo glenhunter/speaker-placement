@@ -18,6 +18,16 @@
   --content: var(--light-blue);
   --highlight: var(--orange);
   --footer: var(--orange);
+
+  /* 16 feet */
+  --room-width: 192px;
+  /* 24 feet */
+  --room-length: 288px;
+  /* 10 feet */
+  --room-height: 120px;
+
+  --sidewall-multiplier: .276;
+  --rearwall-multiplier: .447;
 }
 * {
   box-sizing: border-box;
