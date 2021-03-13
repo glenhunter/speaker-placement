@@ -10,11 +10,22 @@ const length = document.getElementById('room-length');
 const width = document.getElementById('room-width');
 var CSSVariables = document.querySelector(':root');
 
+const rearWallMulti = .447;
+const sideWallMulti = .276;
+
 submitButton.addEventListener("click", function(){
   // Set HTML text and values
   displayLength.innerText = length.value + ' ' + measurement.value;
 
   displayWidth.innerText = width.value + ' ' + measurement.value;
+
+  frontWallDistance.innerText = rearWallMulti * length.value + ' ' + measurement.value; 
+
+  leftWallDistance.innerText = sideWallMulti * length.value + ' ' + measurement.value; 
+
+  sideWallDistance.innerText = rearWallMulti * width.value + ' ' + measurement.value; 
+
+  backWallDistance.innerText = sideWallMulti * width.value + ' ' + measurement.value; 
 
   // Set CSS variables
   CSSVariables.style.setProperty('--room-length', length.value + 'px');
