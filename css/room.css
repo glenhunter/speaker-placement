@@ -1,11 +1,3 @@
-:root {
-  --room-width: 500px;
-  --room-length: 700px;
-  --room-height: 400px;
-  --sidewall-multiplier: .276;
-  --rearwall-multiplier: .447;
-}
-
 .room-container {
   padding: 1rem;
   position: relative;
@@ -40,8 +32,8 @@
 .room {
   /* we want the rectangle to be oriented with the short sides at
      the top and bottom */
-  height: var(--room-length);
-  width: var(--room-width);
+  height: calc(var(--room-length) * 5);
+  width: calc(var(--room-width) * 5);
 
   background-color: #fff;
   border: 3px solid #000;
