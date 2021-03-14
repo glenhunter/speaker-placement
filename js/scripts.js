@@ -28,17 +28,30 @@ submitButton.addEventListener("click", function(){
 
   displayWidth.innerText = width.value + ' ' + measurement.value;
 
-  frontWallDistance.innerText = rearWallMulti * length.value + ' ' + measurement.value; 
+  let calculatedValueFront = rearWallMulti * length.value + ' ' + measurement.value; 
 
-  leftWallDistance.innerText = sideWallMulti * length.value + ' ' + measurement.value; 
+  let calculatedValueLeft = sideWallMulti * length.value + ' ' + measurement.value; 
 
-  sideWallDistance.innerText = rearWallMulti * width.value + ' ' + measurement.value; 
+  let calculatedValueSide = rearWallMulti * width.value + ' ' + measurement.value; 
 
-  backWallDistance.innerText = sideWallMulti * width.value + ' ' + measurement.value; 
+  let calculatedValueBack = sideWallMulti * width.value + ' ' + measurement.value; 
+alert(calculatedValueFront);
 
   CSSVariables.style.setProperty('--room-length', length.value + 'px');
+
+   let roundedValueBack = calculatedValueBack.toFixed(2); 
+   let roundedValueLeft = calculatedValueLeft.toFixed(2);
+   let roundedValueSide = calculatedValueSide.toFixed(2);
+   let roundedValueFront = calculatedValueFront.toFixed(2);
+  alert(roundedValueBack);
+
+   backWallDistance.innerText = roundedValueBack;
+   sideWallDistance.innerText = roundedValueSide;
+   leftWallDistance.innerText = roundedValueLeft;
+   frontWallDistance.innerText = roundedValueFront;
   }
 
+  
   // Set CSS variables
   
 
