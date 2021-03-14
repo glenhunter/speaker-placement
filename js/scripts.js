@@ -28,14 +28,14 @@ submitButton.addEventListener("click", function(){
 
   displayWidth.innerText = width.value + ' ' + measurement.value;
 
-  let calculatedValueFront = rearWallMulti * length.value + ' ' + measurement.value; 
+  let calculatedValueFront = rearWallMulti * length.value; 
 
-  let calculatedValueLeft = sideWallMulti * length.value + ' ' + measurement.value; 
+  let calculatedValueLeft = sideWallMulti * length.value;
 
-  let calculatedValueSide = rearWallMulti * width.value + ' ' + measurement.value; 
+  let calculatedValueSide = rearWallMulti * width.value;
 
-  let calculatedValueBack = sideWallMulti * width.value + ' ' + measurement.value; 
-alert(calculatedValueFront);
+  let calculatedValueBack = sideWallMulti * width.value; 
+
 
   CSSVariables.style.setProperty('--room-length', length.value + 'px');
 
@@ -43,12 +43,12 @@ alert(calculatedValueFront);
    let roundedValueLeft = calculatedValueLeft.toFixed(2);
    let roundedValueSide = calculatedValueSide.toFixed(2);
    let roundedValueFront = calculatedValueFront.toFixed(2);
-  alert(roundedValueBack);
+  
 
-   backWallDistance.innerText = roundedValueBack;
-   sideWallDistance.innerText = roundedValueSide;
-   leftWallDistance.innerText = roundedValueLeft;
-   frontWallDistance.innerText = roundedValueFront;
+   backWallDistance.innerText = roundedValueBack + ' ' + measurement.value;
+   sideWallDistance.innerText = roundedValueSide + ' ' + measurement.value;
+   leftWallDistance.innerText = roundedValueLeft + ' ' + measurement.value;
+   frontWallDistance.innerText = roundedValueFront + ' ' + measurement.value;
   }
 
   
